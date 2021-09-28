@@ -23,4 +23,4 @@ play animations and control positions
 
 |`<void>` ACS:PlayAvatarAnimation(`<String instrument>`)|
 |:-|
-|● *Plays an Animation on the model* <br> ● *`Instrument` must be a Model Instance with a Humanoid* <br> ● *`Instrument` must by a Model Instance with a PrimaryPart*|
+|● *Plays an Animation on the model* <br> ● *`Instrument` must be a Model Instance with a Humanoid*|
