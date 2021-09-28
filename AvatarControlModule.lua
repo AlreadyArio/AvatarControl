@@ -1,4 +1,4 @@
--- Fix Call a nil value Line 46
+-- PlayMusic index of what each song for instrument needs Line 31 Reference
 
 local ACS = {
 	Status = {
@@ -8,8 +8,8 @@ local ACS = {
 	},
 	
 	Positions = {
-		Front = {0,0,0},
-		FrontOR = {0,0,0},
+		Front = {-20, 5, 38.5},
+		FrontOR = {10, 40, 20},
 
 		Back = {0,0,0},
 		BackOR = {0,0,0},
@@ -26,6 +26,14 @@ local ACS = {
 			Idle = "rbxassetid://6536593350",
 			Playing = "rbxassetid://6535911435",
 		},
+	},
+
+	Songs = {
+		["France de la fex"] = {
+			"Cello", 
+			"Guitar", 
+			"Piano"
+		}
 	}
 	
 }
@@ -51,16 +59,20 @@ function ACS:AddAvatar(Model, Location)
 		local HumanoidRootPart = Model:WaitForChild("HumanoidRootPart")
 
 		if Location == "Front" then
-			HumanoidRootPart.CFrame = CFrame.new(unpack(ACS.Positions.Front)) * CFrame.Angles(unpack(ACS.Positions.FrontOR))
+			HumanoidRootPart.CFrame = CFrame.new(unpack(ACS.Positions.Front))
+			Model:SetPrimaryPartCFrame(Model.PrimaryPart.CFrame * CFrame.Angles(math.rad(ACS.Positions.FrontOR[1]), math.rad(ACS.Positions.FrontOR[2]), math.rad(ACS.Positions.FrontOR[3])))
 
 		elseif Location == "Back" then
 			HumanoidRootPart.CFrame = CFrame.new(unpack(ACS.Positions.Back)) * CFrame.Angles(unpack(ACS.Positions.BackOR))
+			Model:SetPrimaryPartCFrame(Model.PrimaryPart.CFrame * CFrame.Angles(math.rad(ACS.Positions.FrontOR[1]), math.rad(ACS.Positions.FrontOR[2]), math.rad(ACS.Positions.FrontOR[3])))
 
 		elseif Location == "Left" then
 			HumanoidRootPart.CFrame = CFrame.new(unpack(ACS.Positions.Left)) * CFrame.Angles(unpack(ACS.Positions.LeftOR))
+			Model:SetPrimaryPartCFrame(Model.PrimaryPart.CFrame * CFrame.Angles(math.rad(ACS.Positions.FrontOR[1]), math.rad(ACS.Positions.FrontOR[2]), math.rad(ACS.Positions.FrontOR[3])))
 
 		elseif Location == "Right" then
 			HumanoidRootPart.CFrame = CFrame.new(unpack(ACS.Positions.Right)) * CFrame.Angles(unpack(ACS.Positions.RightOR))
+			Model:SetPrimaryPartCFrame(Model.PrimaryPart.CFrame * CFrame.Angles(math.rad(ACS.Positions.FrontOR[1]), math.rad(ACS.Positions.FrontOR[2]), math.rad(ACS.Positions.FrontOR[3])))
 		end
 	end
 	
@@ -87,8 +99,6 @@ function ACS:PlayAvatarAnimation(Instrument)
 		LoadedPlaying:Play()
 		LoadedIdle:Stop()
 		LoadedPlaying:AdjustSpeed(0.4)
-		
-		print("Hee")
 		
 	end
 end
