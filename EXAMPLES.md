@@ -11,6 +11,8 @@ wait(4)
 ACS:PlayAvatarAnimation("Cello")
 ```
 
+<br>
+
 Loops the playing and idle animation:
 ```local AvatarControl = require(script.Parent.AvatarControlModule)
 local Musicians = game.Workspace.Musicians
