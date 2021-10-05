@@ -12,6 +12,7 @@ ACS:PlayAvatarAnimation("Cello")
 ```
 
 <br>
+<br>
 
 Loops the playing and idle animation:
 ```local AvatarControl = require(script.Parent.AvatarControlModule)
