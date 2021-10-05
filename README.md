@@ -21,6 +21,6 @@ play animations and control positions
 |● *Removes the model from sight* <br> ● *`Model` must by a Model Instance with a PrimaryPart*|
 |Note: This does not destroy the model. It only sets the positions to `-10000,-10000,-10000`|
 
-|`<void>` ACS:PlayAvatarAnimation(`<String instrument>`)|
+|`<void>` ACS:PlayAvatarAnimation(`<Model>`, `<AnimationSpeedPlaying>`, `<AnimationSpeedIdle>`, `<Bool>`)|
 |:-|
-|● *Plays an Animation on the model* <br> ● *`Instrument` must be a Model Instance with a Humanoid*|
+|● *Plays an Animation on the model*  <br> ● *`Model` must be a Model Instance with a Humanoid* <br> ● *`AnimationSpeedPlaying` the speed of the Playing animation in the avatar*  <br> ● *`AnimationSpeedIdle` the speed of the Idle animation in the avatar* <br> ● *`Bool` must be a boolean value*|
