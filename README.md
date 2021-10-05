@@ -5,7 +5,7 @@ play animations and control positions
 <br>
 
 - Get the ACS module from [Roblox library](https://www.roblox.com/library/7591266511/Avatar-Control-Module).
-- See some [examples](github.ryur.md).
+- See some [examples](https://github.com/Trisxcal/AvatarControl/blob/main/EXAMPLES.md).
 
 <br>
 
