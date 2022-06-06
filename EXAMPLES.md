@@ -2,7 +2,7 @@
 
 <br>
 
-Adds musician and plays the animation after a time period:
+## Adds musician and plays the animation after a time period:
 ```local ACS = require(script.Parent.ModuleScript)
 local Musicians = game.Workspace.Musicians
 
@@ -11,10 +11,7 @@ wait(4)
 ACS:PlayAvatarAnimation("Cello")
 ```
 
-<br>
-<br>
-
-Loops the playing and idle animation:
+## Loops the playing and idle animation:
 ```local AvatarControl = require(script.Parent.AvatarControlModule)
 local Musicians = game.Workspace.Musicians
 
